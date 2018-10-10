@@ -6,9 +6,9 @@ import "./../css/output.css";
 function SignIn(props) {
   const signOut = () => {
     auth0Client.signOut();
-    props.history.replace(
-      "https://jmcatee25.github.io/Road-to-Hire-ecommerce/"
-    );
+    // props.history.replace(
+    //   "https://jmcatee25.github.io/Road-to-Hire-ecommerce/"
+    // );
   };
   return (
     <nav className="auth0Container">
