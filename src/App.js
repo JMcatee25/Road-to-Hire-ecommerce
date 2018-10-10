@@ -228,11 +228,11 @@ class App extends Component {
         <SignIn />
         <Route
           exact
-          path="https://jmcatee25.github.io/Road-to-Hire-ecommerce/callback"
+          path={process.env.PUBLIC_URL + "/callback"}
           component={Callback}
         />
         <SecuredRoute
-          path="https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin"
+          path={process.env.PUBLIC_URL + "/Admin"}
           component={Admin}
           products={this.state.products}
           contactInfo={this.state.contactinfo}
