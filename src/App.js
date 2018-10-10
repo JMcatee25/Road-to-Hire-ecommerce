@@ -249,17 +249,17 @@ class App extends Component {
         />
         <Switch>
           <Route
-            path="https://jmcatee25.github.io/Road-to-Hire-ecommerce/"
+            path={process.env.PUBLIC_URL + "/"}
             exact
             render={props => <Home {...props} state={this.state} />}
           />
           <Route
-            path="https://jmcatee25.github.io/Road-to-Hire-ecommerce/Contact"
+            path={process.env.PUBLIC_URL + "/Contact"}
             exact
             component={Contact}
           />
           <Route
-            path="https://jmcatee25.github.io/Road-to-Hire-ecommerce/Store"
+            path={process.env.PUBLIC_URL + "/Store"}
             exact
             render={props => (
               <Store
