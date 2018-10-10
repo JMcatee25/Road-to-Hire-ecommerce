@@ -40,16 +40,20 @@ export default class Store extends Component {
     return (
       <div>
         <Switch>
-          <Route path="/Contact" exact component={Contact} />
-          <Route path="/" exact component={App} />
+          <Route
+            path={process.env.PUBLIC_URL + "/Contact"}
+            exact
+            component={Contact}
+          />
+          <Route path={process.env.PUBLIC_URL + "/"} exact component={App} />
         </Switch>
-        <Link to="/">
+        <Link to={process.env.PUBLIC_URL + "/"}>
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <nav>
           <ul>
             <li>
-              <Link to="/">
+              <Link to={process.env.PUBLIC_URL + "/"}>
                 <span>H</span>
                 <span>O</span>
                 <span>M</span>
@@ -57,7 +61,7 @@ export default class Store extends Component {
               </Link>
             </li>
             <li>
-              <Link to="/Contact">
+              <Link to={process.env.PUBLIC_URL + "/Contact"}>
                 <span>C</span>
                 <span>O</span>
                 <span>N</span>
@@ -69,7 +73,7 @@ export default class Store extends Component {
             </li>
             {auth0Client.isAuthenticated() ? (
               <li>
-                <Link to="/Admin">
+                <Link to={process.env.PUBLIC_URL + "/Admin"}>
                   <span>A</span>
                   <span>D</span>
                   <span>M</span>

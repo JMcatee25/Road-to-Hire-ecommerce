@@ -86,7 +86,7 @@ export default class Admin extends Component {
             </button>
           </form>
         </div>
-        <Link to="/">
+        <Link to={process.env.PUBLIC_URL + "/"}>
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <div className="admin__switchButtons__container">

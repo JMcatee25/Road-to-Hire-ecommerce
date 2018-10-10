@@ -11,16 +11,20 @@ export default class Contact extends Component {
     return (
       <div>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/Store" exact component={Store} />
+          <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
+          <Route
+            path={process.env.PUBLIC_URL + "/Store"}
+            exact
+            component={Store}
+          />
         </Switch>
-        <Link to="/">
+        <Link to={process.env.PUBLIC_URL + "/"}>
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <nav>
           <ul>
             <li>
-              <Link to="/">
+              <Link to={process.env.PUBLIC_URL + "/"}>
                 <span>H</span>
                 <span>O</span>
                 <span>M</span>
@@ -28,7 +32,7 @@ export default class Contact extends Component {
               </Link>
             </li>
             <li>
-              <Link to="/Store">
+              <Link to={process.env.PUBLIC_URL + "/Store"}>
                 <span>S</span>
                 <span>T</span>
                 <span>O</span>
@@ -38,7 +42,7 @@ export default class Contact extends Component {
             </li>
             {auth0Client.isAuthenticated() ? (
               <li>
-                <Link to="/Admin">
+                <Link to={process.env.PUBLIC_URL + "/Admin"}>
                   <span>A</span>
                   <span>D</span>
                   <span>M</span>
