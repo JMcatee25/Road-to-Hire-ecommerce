@@ -226,9 +226,13 @@ class App extends Component {
     return (
       <div className="App">
         <SignIn />
-        <Route exact path="/callback" component={Callback} />
+        <Route
+          exact
+          path="https://jmcatee25.github.io/Road-to-Hire-ecommerce/callback"
+          component={Callback}
+        />
         <SecuredRoute
-          path="/Admin"
+          path="https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin"
           component={Admin}
           products={this.state.products}
           contactInfo={this.state.contactinfo}
@@ -245,13 +249,17 @@ class App extends Component {
         />
         <Switch>
           <Route
-            path="/"
+            path="https://jmcatee25.github.io/Road-to-Hire-ecommerce/"
             exact
             render={props => <Home {...props} state={this.state} />}
           />
-          <Route path="/Contact" exact component={Contact} />
           <Route
-            path="/Store"
+            path="https://jmcatee25.github.io/Road-to-Hire-ecommerce/Contact"
+            exact
+            component={Contact}
+          />
+          <Route
+            path="https://jmcatee25.github.io/Road-to-Hire-ecommerce/Store"
             exact
             render={props => (
               <Store
