@@ -5,7 +5,9 @@ import auth0Client from "./Auth";
 class Callback extends Component {
   async componentDidMount() {
     await auth0Client.handleAuthentication();
-    this.props.history.replace("/Admin");
+    this.props.history.replace(
+      "https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin"
+    );
   }
 
   render() {
