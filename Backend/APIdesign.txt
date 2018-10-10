@@ -1,0 +1,21 @@
+Resources: products, users
+Operations: GET, POST, DELETE, UPDATE
+
+Product Handling:
+POST::FruitCo.com/adminuser/add-product = if adminuser is an allowed user, will allow adminuser to add products
+GET::FruitCo.com/adminuser/get-products = if adminuser is an allowed user, will return a JSON file with all products
+GET::FruitCo.com/adminuser/id/get-product = if adminuser is an allowed user, will return a JSON file with product of specified ID
+UPDATE::FruitCo.com/adminuser/edit-products = if adminuser is an allowed user, will allow adminuser to edit products JSON file 
+DELETE::FruitCo.com/adminuser/id/delete-product = if adminuser is an allowed user, will allow adminuser to delete product of specified ID
+
+User Handling:
+POST::FruitCo.com/adminuser/add-user = if adminuser is an allowed user, will allow adminuser to add other adminusers
+GET::FruitCo.com/adminuser/get-users = if adminuser is an allowed user, will return a JSON file with all users
+GET::FruitCo.com/adminuser/id/get-user = if adminuser is an allowed user, will return a JSON file with user of specified ID
+UPDATE::FruitCo.com/adminuser/edit-user = if adminuser is an allowed user, will allow adminuser to edit user information 
+DELETE::FruitCo.com/adminuser/id/delete-user = if adminuser is an allowed user, will allow adminuser to delete user of specified ID
+
+Form Handling:
+GET::FruitCo.com/adminuser/contact = if adminuser is an allowed user, will return information submitted through contact Form
+DELETE::FruitCo.com/adminuser/contact = if adminuser is an allowed user, will allow adminuser to delete information submitted through contact Form
+
