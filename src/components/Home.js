@@ -17,7 +17,7 @@ export default class Home extends Component {
         <nav>
           <ul>
             <li>
-              <Link to="/">
+              <Link to={process.env.PUBLIC_URL + "/"}>
                 <span>H</span>
                 <span>O</span>
                 <span>M</span>
@@ -25,7 +25,7 @@ export default class Home extends Component {
               </Link>
             </li>
             <li>
-              <Link to="/Store">
+              <Link to={process.env.PUBLIC_URL + "/Store"}>
                 <span>S</span>
                 <span>T</span>
                 <span>O</span>
@@ -34,7 +34,7 @@ export default class Home extends Component {
               </Link>
             </li>
             <li>
-              <Link to="/Contact">
+              <Link to={process.env.PUBLIC_URL + "/Contact"}>
                 <span>C</span>
                 <span>O</span>
                 <span>N</span>
@@ -46,7 +46,7 @@ export default class Home extends Component {
             </li>
             {auth0Client.isAuthenticated() ? (
               <li>
-                <Link to="/Admin">
+                <Link to={process.env.PUBLIC_URL + "/Admin"}>
                   <span>A</span>
                   <span>D</span>
                   <span>M</span>
