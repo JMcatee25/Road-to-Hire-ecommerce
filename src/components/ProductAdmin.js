@@ -3,7 +3,6 @@ import "./../css/output.css";
 
 export default class AdminProduct extends Component {
   render() {
-    const myid = this.props.id;
     return (
       <form
         className="product__container Admin__container"
