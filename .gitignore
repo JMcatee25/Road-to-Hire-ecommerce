@@ -42,6 +42,7 @@ Thumbs.db
 /node_modules
 /Backend/mongo
 /Backend/mongo-data
+/Backend/db
 
 # testing
 /coverage
