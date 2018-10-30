@@ -6,7 +6,7 @@ import "./../css/output.css";
 function SignIn(props) {
   const signOut = () => {
     auth0Client.signOut();
-    props.history.replace("/Road-to-Hire-ecommerce/");
+    props.history.replace("/");
   };
   return (
     <nav className="auth0Container">

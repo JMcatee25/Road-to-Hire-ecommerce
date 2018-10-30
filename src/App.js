@@ -48,10 +48,13 @@ class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then(json => {
-        this.setState({
-          isLoading: false,
-          products: json
-        });
+        this.setState(
+          {
+            isLoading: false,
+            products: json
+          },
+          () => console.log(json)
+        );
       })
       .catch(function(error) {
         this.setState({
@@ -75,6 +78,7 @@ class App extends Component {
         console.log(error);
       });
   }
+
   // Filter methods, (Need to fix this)
   handleShowAll() {
     this.setState({
@@ -165,6 +169,13 @@ class App extends Component {
     window.location.reload();
   }
 
+  handleDeleteContact(id) {
+    fetch(`http://localhost:3001/form_submission/${id}`, {
+      method: "DELETE"
+    }).then(response => response.json());
+    window.location.reload();
+  }
+
   showModal() {
     const modal = document.querySelector(".modal");
     if (modal.style.display === "none" || modal.style.display === "") {
@@ -202,14 +213,15 @@ class App extends Component {
       description,
       availability,
       category,
-      productImageurl
+      productImageurl,
+      productID: id
     };
-    this.handleEditFetch(id, reqbody);
+    this.handleEditFetch(reqbody);
   };
 
-  handleEditFetch = (id, reqbody) => {
+  handleEditFetch = reqbody => {
     fetch(
-      `http://localhost:3001/products/${id}`, // eslint-disable-line semi
+      `http://localhost:3001/products`, // eslint-disable-line semi
       {
         method: "PUT",
         headers: {
@@ -228,11 +240,13 @@ class App extends Component {
         <SignIn />
         <Route
           exact
+          // path="/callback"
           path={process.env.PUBLIC_URL + "/callback"}
           component={Callback}
         />
         <SecuredRoute
-          path={process.env.PUBLIC_URL + "/Admin"}
+          // path={process.env.PUBLIC_URL + "/Admin"}
+          path="/Admin"
           component={Admin}
           products={this.state.products}
           contactInfo={this.state.contactinfo}
@@ -249,17 +263,14 @@ class App extends Component {
         />
         <Switch>
           <Route
-            path={process.env.PUBLIC_URL + "/"}
+            path="/"
             exact
             render={props => <Home {...props} state={this.state} />}
           />
+          <Route path="/Contact" exact component={Contact} />
           <Route
-            path={process.env.PUBLIC_URL + "/Contact"}
-            exact
-            component={Contact}
-          />
-          <Route
-            path={process.env.PUBLIC_URL + "/Store"}
+            // path={process.env.PUBLIC_URL + "/Store"}
+            path="/Store"
             exact
             render={props => (
               <Store

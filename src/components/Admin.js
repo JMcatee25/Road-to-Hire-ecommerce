@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 export default class Admin extends Component {
   render() {
+    console.log(this.props.props.products);
     let AdminProductList = this.props.props.products.map((product, index) => {
       return (
         <AdminProduct
@@ -24,7 +25,7 @@ export default class Admin extends Component {
           isEditing={this.props.isEditing}
           key={index}
           index={index}
-          id={product._id}
+          id={product.productID}
         />
       );
     });

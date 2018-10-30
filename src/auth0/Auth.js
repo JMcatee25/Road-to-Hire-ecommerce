@@ -7,8 +7,7 @@ class Auth {
       domain: "jarrodmcatee.auth0.com",
       audience: "https://jarrodmcatee.auth0.com/userinfo",
       clientID: "4J02d9PF0cboKnoIjlPV11asdXHvX9mT",
-      redirectUri:
-        "https://JMcatee25.github.io/Road-to-Hire-ecommerce/callback",
+      redirectUri: "http:/localhost:3000/callback",
       responseType: "token id_token",
       scope: "openid profile"
     });
