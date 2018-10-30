@@ -169,12 +169,12 @@ class App extends Component {
     window.location.reload();
   }
 
-  handleDeleteContact(id) {
+  handleDeleteContact = id => {
     fetch(`http://localhost:3001/form_submission/${id}`, {
       method: "DELETE"
     }).then(response => response.json());
     window.location.reload();
-  }
+  };
 
   showModal() {
     const modal = document.querySelector(".modal");
@@ -258,6 +258,7 @@ class App extends Component {
           wantedEditId={this.state.wantedEditId}
           showModal={this.showModal}
           handleDeleteProduct={this.handleDeleteProduct}
+          handleDeleteContact={this.handleDeleteContact}
           handleEdit={this.handleEdit}
           isEditing={this.state.isEditing}
         />

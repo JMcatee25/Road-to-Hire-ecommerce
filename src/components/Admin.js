@@ -36,6 +36,7 @@ export default class Admin extends Component {
           email={info.email}
           zip={info.zip}
           key={index}
+          handleDeleteContact={this.props.props.handleDeleteContact}
           index={index}
         />
       );
