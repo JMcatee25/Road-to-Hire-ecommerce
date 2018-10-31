@@ -48,13 +48,10 @@ class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then(json => {
-        this.setState(
-          {
-            isLoading: false,
-            products: json
-          },
-          () => console.log(json)
-        );
+        this.setState({
+          isLoading: false,
+          products: json
+        });
       })
       .catch(function(error) {
         this.setState({

@@ -86,7 +86,7 @@ app.delete("/products/:id", function(req, res) {
 
 app.delete("/form_submission/:id", function(req, res) {
   const id = req.params.id;
-  connection.query(`DELETE FROM contactinfos WHERE productID=${id}`, function(
+  connection.query(`DELETE FROM contactinfos WHERE contactID=${id}`, function(
     error
   ) {
     if (error) throw error;
