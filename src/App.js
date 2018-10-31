@@ -242,8 +242,8 @@ class App extends Component {
           component={Callback}
         />
         <SecuredRoute
-          // path={process.env.PUBLIC_URL + "/Admin"}
-          path="/Admin"
+          path={process.env.PUBLIC_URL + "/Admin"}
+          // path="/Admin"
           component={Admin}
           products={this.state.products}
           contactInfo={this.state.contactinfo}
