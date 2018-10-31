@@ -261,14 +261,20 @@ class App extends Component {
         />
         <Switch>
           <Route
-            path="/"
+            // path="/"
+            path={process.env.PUBLIC_URL + "/"}
             exact
             render={props => <Home {...props} state={this.state} />}
           />
-          <Route path="/Contact" exact component={Contact} />
           <Route
-            // path={process.env.PUBLIC_URL + "/Store"}
-            path="/Store"
+            //  path="/Contact"
+            path={process.env.PUBLIC_URL + "/Contact"}
+            exact
+            component={Contact}
+          />
+          <Route
+            path={process.env.PUBLIC_URL + "/Store"}
+            // path="/Store"
             exact
             render={props => (
               <Store
