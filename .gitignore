@@ -43,6 +43,7 @@ Thumbs.db
 /Backend/mongo
 /Backend/mongo-data
 /Backend/db
+/Backend/connection
 
 # testing
 /coverage

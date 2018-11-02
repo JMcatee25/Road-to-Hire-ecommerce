@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 var cors = require("cors");
 const app = express();
+require("./connection");
 
 app.use(cors());
 
@@ -14,13 +15,6 @@ app.use(
     extended: true
   })
 );
-
-var connection = mysql.createConnection({
-  host: "road2hire.ninja",
-  user: "r2hstudent", //your username
-  password: "SbFaGzNgGIE8kfP",
-  database: "jmcatee" //the name of your db
-});
 
 app.get("/products", function(req, res) {
   connection.query("select * from ecommerceproducts", function(error, results) {
