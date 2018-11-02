@@ -42,7 +42,8 @@ app.post("/products", function(req, res) {
     error
   ) {
     if (error) throw error;
-    res.redirect("https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin");
+    // res.redirect("https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin");
+    res.redirect("localhost:3000/Admin");
   });
 });
 
@@ -50,7 +51,8 @@ app.post("/form_submission", function(req, res) {
   var postData = req.body;
   connection.query("INSERT INTO contactinfos SET ?", postData, function(error) {
     if (error) throw error;
-    res.redirect("https://jmcatee25.github.io/Road-to-Hire-ecommerce/Contact");
+    // res.redirect("https://jmcatee25.github.io/Road-to-Hire-ecommerce/Contact");
+    res.redirect("localhost:3000/Admin");
   });
 });
 
@@ -68,7 +70,8 @@ app.put("/products", function(req, res) {
     ],
     function(error, results) {
       if (error) throw error;
-      res.redirect("https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin");
+      // res.redirect("https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin");
+      res.redirect("localhost:3000/Admin");
     }
   );
 });
@@ -79,7 +82,8 @@ app.delete("/products/:id", function(req, res) {
     `DELETE FROM ecommerceproducts WHERE productID=${id}`,
     function(error) {
       if (error) throw error;
-      res.redirect("https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin");
+      // res.redirect("https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin");
+      res.redirect("localhost:3000/Admin");
     }
   );
 });
@@ -90,7 +94,8 @@ app.delete("/form_submission/:id", function(req, res) {
     error
   ) {
     if (error) throw error;
-    res.redirect("https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin");
+    // res.redirect("https://jmcatee25.github.io/Road-to-Hire-ecommerce/Admin");
+    res.redirect("localhost:3000/Admin");
   });
 });
 

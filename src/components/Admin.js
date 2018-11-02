@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 export default class Admin extends Component {
   render() {
-    console.log(this.props.props.products);
     let AdminProductList = this.props.props.products.map((product, index) => {
       return (
         <AdminProduct
