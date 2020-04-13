@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://JMcatee25.github.io/Road-to-Hire-ecommerce/",
   "dependencies": {
-    "auth0-js": "^9.8.1",
+    "auth0-js": "^9.13.2",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.4",
